@@ -132,11 +132,11 @@
     </template>
 
     <template data-hr-component="hr.forms.default-multicheckboxitem">
-        <div class="form-check"><input type="checkbox" class="form-check-input" value="{{value}}" data-hr-handle="check" />&nbsp;<label class="form-check-label">{{label}}</label></div>
+        <div class="form-check"><input type="checkbox" class="form-check-input" value="{{value}}" data-hr-handle="check" id="{{uniqueId}}" />&nbsp;<label class="form-check-label" for="{{uniqueId}}">{{label}}</label></div>
     </template>
 
     <template data-hr-component="hr.forms.default-radiobutton">
-        <div class="radio"><label><input type="radio" name="{{name}}" value="{{value}}" data-hr-handle="radio" />&nbsp;{{label}}</label></div>
+        <div class="form-check"><input type="radio" class="form-check-input" id="{{uniqueId}}" name="{{name}}" value="{{value}}" data-hr-handle="radio" />&nbsp;<label class="form-check-label" for="{{uniqueId}}">{{label}}</label></div>
     </template>
 
     <template data-hr-component="hr.forms.default-arrayEditorItem">
@@ -290,11 +290,11 @@
     </template>
 
     <template data-hr-component="hr.forms.horizontal-multicheckboxitem">
-        <div class="form-check"><input type="checkbox" class="form-check-input" value="{{value}}" data-hr-handle="check" />&nbsp;<label class="form-check-label">{{label}}</label></div>
+        <div class="form-check"><input type="checkbox" class="form-check-input" value="{{value}}" data-hr-handle="check" id="{{uniqueId}}" />&nbsp;<label class="form-check-label" for="{{uniqueId}}">{{label}}</label></div>
     </template>
 
     <template data-hr-component="hr.forms.horizontal-radiobutton">
-        <div class="radio"><label><input type="radio" name="{{name}}" value="{{value}}" data-hr-handle="radio" />&nbsp;{{label}}</label></div>
+        <div class="form-check"><input type="radio" class="form-check-input" id="{{uniqueId}}" name="{{name}}" value="{{value}}" data-hr-handle="radio" />&nbsp;<label class="form-check-label" for="{{uniqueId}}">{{label}}</label></div>
     </template>
 
     <template data-hr-component="hr.forms.horizontal-arrayEditorItem">

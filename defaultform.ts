@@ -20,10 +20,10 @@ builder.addVariant("radiobutton", new VariantBuilder('<div data-hr-toggle="{{bui
 builder.addVariant("search", new VariantBuilder('<div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;"> <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error"> <label for="{{uniqueId}}"> {{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span> </label> <div data-hr-on-focusout="stopSearch" data-hr-handle="searchFocusParent"> <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" data-hr-on-input="updateSearch"> <div class="dropdown" data-hr-toggle="popup" data-hr-class-on="open"> <ul class="dropdown-menu" data-hr-view="results" data-hr-view-component="hr.forms.default-searchResult"></ul> </div> </div> </div> </div>'));
 component.register("hr.forms.default", builder);
 
-builder = new ComponentBuilder('<div class="form-check"><input type="checkbox" class="form-check-input" value="{{value}}" data-hr-handle="check">&nbsp;<label class="form-check-label">{{label}}</label></div>');
+builder = new ComponentBuilder('<div class="form-check"><input type="checkbox" class="form-check-input" value="{{value}}" data-hr-handle="check" id="{{uniqueId}}">&nbsp;<label class="form-check-label" for="{{uniqueId}}">{{label}}</label></div>');
 component.register("hr.forms.default-multicheckboxitem", builder);
 
-builder = new ComponentBuilder('<div class="radio"><label><input type="radio" name="{{name}}" value="{{value}}" data-hr-handle="radio">&nbsp;{{label}}</label></div>');
+builder = new ComponentBuilder('<div class="form-check"><input type="radio" class="form-check-input" id="{{uniqueId}}" name="{{name}}" value="{{value}}" data-hr-handle="radio">&nbsp;<label class="form-check-label" for="{{uniqueId}}">{{label}}</label></div>');
 component.register("hr.forms.default-radiobutton", builder);
 
 builder = new ComponentBuilder('<div class="panel panel-default"><div class="panel-body"><button type="button" data-hr-on-click="remove" class="btn btn-default" data-hr-form-end="">Remove</button></div></div>');
@@ -48,10 +48,10 @@ builder.addVariant("radiobutton", new VariantBuilder('<div data-hr-toggle="{{bui
 builder.addVariant("search", new VariantBuilder('<div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;"> <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error"> <label for="{{uniqueId}}" class="col-sm-2"> {{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span> </label> <div class="col-sm-10" data-hr-on-focusout="stopSearch" data-hr-handle="searchFocusParent"> <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" data-hr-on-input="updateSearch"> <div class="dropdown" data-hr-toggle="popup" data-hr-class-on="open"> <ul class="dropdown-menu" data-hr-view="results" data-hr-view-component="hr.forms.horizontal-searchResult"></ul> </div> </div> </div> </div>'));
 component.register("hr.forms.horizontal", builder);
 
-builder = new ComponentBuilder('<div class="form-check"><input type="checkbox" class="form-check-input" value="{{value}}" data-hr-handle="check">&nbsp;<label class="form-check-label">{{label}}</label></div>');
+builder = new ComponentBuilder('<div class="form-check"><input type="checkbox" class="form-check-input" value="{{value}}" data-hr-handle="check" id="{{uniqueId}}">&nbsp;<label class="form-check-label" for="{{uniqueId}}">{{label}}</label></div>');
 component.register("hr.forms.horizontal-multicheckboxitem", builder);
 
-builder = new ComponentBuilder('<div class="radio"><label><input type="radio" name="{{name}}" value="{{value}}" data-hr-handle="radio">&nbsp;{{label}}</label></div>');
+builder = new ComponentBuilder('<div class="form-check"><input type="radio" class="form-check-input" id="{{uniqueId}}" name="{{name}}" value="{{value}}" data-hr-handle="radio">&nbsp;<label class="form-check-label" for="{{uniqueId}}">{{label}}</label></div>');
 component.register("hr.forms.horizontal-radiobutton", builder);
 
 builder = new ComponentBuilder('<div class="panel panel-default"> <div class="panel-body"> <button type="button" data-hr-on-click="remove" class="btn btn-default" data-hr-form-end="">Remove</button> </div> </div>');
