@@ -153,8 +153,8 @@
     <!-- Horizontal Form -->
     <template data-hr-component="hr.forms.horizontal">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}" class="col-sm-2">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
+            <div class="form-group row" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
+                <label for="{{uniqueId}}" class="col-sm-2 col-form-label">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
                 <div class="col-sm-10">
                     {{if xUi.autocomplete}}
                     <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="{{buildType}}" list="{{uniqueId}}-datalist" />
@@ -168,8 +168,8 @@
     </template>
     <template data-hr-variant="date-time">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}" class="col-sm-2">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
+            <div class="form-group row" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
+                <label for="{{uniqueId}}" class="col-sm-2 col-form-label">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
                 <div class="col-sm-10">
                     <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" />
                 </div>
@@ -178,8 +178,8 @@
     </template>
     <template data-hr-variant="date">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}" class="col-sm-2">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
+            <div class="form-group row" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
+                <label for="{{uniqueId}}" class="col-sm-2 col-form-label">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
                 <div class="col-sm-10">
                     <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" />
                 </div>
@@ -188,8 +188,8 @@
     </template>
     <template data-hr-variant="textarea">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}" class="col-sm-2">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
+            <div class="form-group row" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
+                <label for="{{uniqueId}}" class="col-sm-2 col-form-label">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
                 <div class="col-sm-10">
                     <textarea id="{{uniqueId}}" class="form-control" name="{{buildName}}" rows="{{size}}"></textarea>
                 </div>
@@ -197,8 +197,9 @@
         </div>
     </template>
     <template data-hr-variant="checkbox">
-        <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="col-sm-offset-2 col-sm-10">
+        <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;" class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" name="{{buildName}}" value="{{buildValue}}" id="{{uniqueId}}" />&nbsp;
                     <label class="form-check-label" for="{{uniqueId}}">{{title}}</label>
@@ -211,8 +212,9 @@
     </template>
     <template data-hr-variant="number">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}" class="col-sm-2">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label><div class="col-sm-10">
+            <div class="form-group row" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
+                <label for="{{uniqueId}}" class="col-sm-2 col-form-label">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
+                <div class="col-sm-10">
                     <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="number" step="any" />
                 </div>
             </div>
@@ -220,8 +222,9 @@
     </template>
     <template data-hr-variant="select">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}" class="col-sm-2">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label><div class="col-sm-10">
+            <div class="form-group row" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
+                <label for="{{uniqueId}}" class="col-sm-2 col-form-label">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
+                <div class="col-sm-10">
                     <select id="{{uniqueId}}" class="form-control" name="{{buildName}}" />
                 </div>
             </div>
@@ -229,8 +232,8 @@
     </template>
     <template data-hr-variant="multiselect">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}" class="col-sm-2">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label><div class="col-sm-10">
+            <div class="form-group row" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
+                <label for="{{uniqueId}}" class="col-sm-2 col-form-label">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label><div class="col-sm-10">
                     <select id="{{uniqueId}}" class="form-control" name="{{buildName}}" multiple size="{{size}}" />
                 </div>
             </div>
@@ -275,8 +278,8 @@
     </template>
     <template data-hr-variant="search">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}" class="col-sm-2">
+            <div class="form-group row" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
+                <label for="{{uniqueId}}" class="col-sm-2 col-form-label">
                     {{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span>
                 </label>
                 <div class="col-sm-10" data-hr-on-focusout="stopSearch" data-hr-handle="searchFocusParent">
