@@ -16,8 +16,5 @@
     "defaultform.ts",
     "defaultformrunner.ts"
   ],
-  "exclude": [
-    "../src"
-  ],
   "compileOnSave": true
 }
