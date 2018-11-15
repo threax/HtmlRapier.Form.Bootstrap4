@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "paths": {
+        "hr.form.*": [
+          "*"
+        ]
+      }
+    },
+    "include": [
+      "**/*.ts"
+    ],
+    "exclude": [
+  
+    ]
+  }
+  
