@@ -1,7 +1,7 @@
 {
-  "name": "htmlrapier.form.bootstrap3",
+  "name": "htmlrapier.form.bootstrap4",
   "version": "0.0.0",
-  "description": "A form that uses Bootstrap 3 for HtmlRapier.",
+  "description": "A form that uses Bootstrap 4 for HtmlRapier.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/threax/HtmlRapier.Bootstrap3.Form.git"
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "htmlrapier": ">=8.1.0",
-    "bootstrap": ">=3.3.7",
+    "bootstrap": ">=4.1.0",
     "jquery": ">=3.2.1"
   },
   "files":[
