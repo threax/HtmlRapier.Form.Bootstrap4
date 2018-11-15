@@ -45,7 +45,7 @@
     </template>
     <template data-hr-variant="checkbox">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-check">
+            <div class="form-check mb-2">
                 <input type="checkbox" class="form-check-input" name="{{buildName}}" value="{{buildValue}}" id="{{uniqueId}}" />&nbsp;
                 <label class="form-check-label" for="{{uniqueId}}">{{title}}</label>
             </div>
@@ -82,8 +82,8 @@
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
             <div data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
                 <label>{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <div class="panel panel-default">
-                    <div class="panel-body">
+                <div class="card">
+                    <div class="card-body">
                         <div data-hr-view="items" data-hr-view-component="hr.forms.default-arrayEditorItem"></div>
                         <button type="button" class="btn btn-default" data-hr-on-click="add">Add</button>
                     </div>
@@ -95,13 +95,13 @@
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
             <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
                 <label>{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <div class="panel panel-default" style="max-height:150px;overflow:auto;">
-                    {{if xUi.selectAll}}
-                    <div class="panel-body" style="padding:0px;">
+                <div class="card" style="max-height:150px;overflow:auto;">
+                    <div class="card-body pt-1 pb-1 pl-2 pr-2">
+                        {{if xUi.selectAll}}
                         <div class="form-check"><input type="checkbox" class="form-check-input" id="{{uniqueId}}-hr-multicheck-selectall" value="true" data-hr-on-click="selectAll" data-hr-handle="selectAll" />&nbsp;<label class="form-check-label" for="{{uniqueId}}-hr-multicheck-selectall">Select All</label></div>
+                        {{/if}}
+                        <div data-hr-view="items" style="padding:0px;" data-hr-view-component="hr.forms.default-multicheckboxitem"></div>
                     </div>
-                    {{/if}}
-                    <div data-hr-view="items" style="padding:0px;" data-hr-view-component="hr.forms.default-multicheckboxitem"></div>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -111,7 +111,11 @@
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
             <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
                 <label>{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <div data-hr-view="items" data-hr-view-component="hr.forms.default-radiobutton"></div>
+                <div class="card">
+                    <div class="card-body pt-1 pb-1 pl-2 pr-2">
+                        <div data-hr-view="items" data-hr-view-component="hr.forms.default-radiobutton"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </template>
@@ -140,7 +144,7 @@
     </template>
 
     <template data-hr-component="hr.forms.default-arrayEditorItem">
-        <div class="panel panel-default"><div class="panel-body"><button type="button" data-hr-on-click="remove" class="btn btn-default" data-hr-form-end>Remove</button></div></div>
+        <div class="card"><div class="card-body"><button type="button" data-hr-on-click="remove" class="btn btn-default" data-hr-form-end>Remove</button></div></div>
     </template>
 
     <template data-hr-component="hr.forms.default-searchResult">
@@ -197,7 +201,7 @@
         </div>
     </template>
     <template data-hr-variant="checkbox">
-        <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;" class="row">
+        <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;" class="row mb-2">
             <div class="col-sm-2"></div>
             <div class="col-sm-10">
                 <div class="form-check">
@@ -242,7 +246,7 @@
     <template data-hr-variant="arrayEditor">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
             <div data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label class="control-label col-sm-2">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
+                <label class="col-sm-2">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
                 <div class="col-sm-10 panel panel-default">
                     <div class="panel-body">
                         <div data-hr-view="items" data-hr-view-component="hr.forms.horizontal-arrayEditorItem"></div>
@@ -254,15 +258,19 @@
     </template>
     <template data-hr-variant="multicheckbox">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label class="control-label col-sm-2">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <div class="col-sm-10 panel panel-default" style="max-height:150px;overflow:auto;">
-                    {{if xUi.selectAll}}
-                    <div class="panel-body" style="padding:0px;">
-                        <div class="form-check"><input type="checkbox" class="form-check-input" id="{{uniqueId}}-hr-multicheck-selectall" value="true" data-hr-on-click="selectAll" data-hr-handle="selectAll" />&nbsp;<label class="form-check-label" for="{{uniqueId}}-hr-multicheck-selectall">Select All</label></div>
+            <div class="form-group row" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
+                <label class="col-sm-2">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
+                <div class="col-sm-10" style="max-height:150px;overflow:auto;">
+                    <div class="card">
+                        <div class="card-body pt-1 pb-1 pl-2 pr-2">
+                            {{if xUi.selectAll}}
+                            <div style="padding:0px;">
+                                <div class="form-check"><input type="checkbox" class="form-check-input" id="{{uniqueId}}-hr-multicheck-selectall" value="true" data-hr-on-click="selectAll" data-hr-handle="selectAll" />&nbsp;<label class="form-check-label" for="{{uniqueId}}-hr-multicheck-selectall">Select All</label></div>
+                            </div>
+                            {{/if}}
+                            <div style="padding:0px;" data-hr-view="items" data-hr-view-component="hr.forms.horizontal-multicheckboxitem"></div>
+                        </div>
                     </div>
-                    {{/if}}
-                    <div class="panel-body" style="padding:0px;" data-hr-view="items" data-hr-view-component="hr.forms.horizontal-multicheckboxitem"></div>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -270,9 +278,13 @@
     </template>
     <template data-hr-variant="radiobutton">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label class="control-label col-sm-2">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <div class="col-sm-10" data-hr-view="items" data-hr-view-component="hr.forms.horizontal-radiobutton"></div>
+            <div class="form-group row" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
+                <label class="col-sm-2">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
+                <div class="col-sm-10">
+                    <div class="card">
+                        <div class="card-body pt-1 pb-1 pl-2 pr-2" data-hr-view="items" data-hr-view-component="hr.forms.horizontal-radiobutton"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </template>
@@ -301,8 +313,8 @@
     </template>
 
     <template data-hr-component="hr.forms.horizontal-arrayEditorItem">
-        <div class="panel panel-default">
-            <div class="panel-body">
+        <div class="card">
+            <div class="card-body">
                 <button type="button" data-hr-on-click="remove" class="btn btn-default" data-hr-form-end>Remove</button>
             </div>
         </div>
