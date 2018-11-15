@@ -1,7 +1,7 @@
 [
     {
         "pathBase": ".",
-        "outDir": "lib/htmlrapier.bootstrap.form",
+        "outDir": "lib/htmlrapier.form",
         "copy": [
           "./defaultform.js"
         ]

@@ -1,5 +1,5 @@
 {
-  "name": "htmlrapier.bootstrap3.form",
+  "name": "htmlrapier.form.bootstrap3",
   "version": "0.0.0",
   "description": "A form that uses Bootstrap 3 for HtmlRapier.",
   "repository": {
