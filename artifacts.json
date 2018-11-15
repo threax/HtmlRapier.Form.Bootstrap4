@@ -1,0 +1,9 @@
+[
+    {
+        "pathBase": ".",
+        "outDir": "lib/bootstrap3form",
+        "copy": [
+          "./defaultform.js"
+        ]
+      }
+]
