@@ -1,6 +1,6 @@
 {
   "name": "htmlrapier.form.bootstrap4",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A form that uses Bootstrap 4 for HtmlRapier.",
   "repository": {
     "type": "git",
@@ -17,9 +17,8 @@
     "jquery": ">=3.2.1"
   },
   "files":[
-    "defaultform.js",
     "defaultform.ts",
     "defaultformrunner.ts",
-    "artifacts.json"
+    "tsimport.json"
   ]
 }
