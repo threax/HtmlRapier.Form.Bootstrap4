@@ -127,8 +127,8 @@
                 </label>
                 <div data-hr-on-focusout="stopSearch" data-hr-handle="searchFocusParent">
                     <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" data-hr-on-input="updateSearch" />
-                    <div class="dropdown" data-hr-toggle="popup" data-hr-class-on="open">
-                        <ul class="dropdown-menu" data-hr-view="results" data-hr-view-component="hr.forms.default-searchResult"></ul>
+                    <div class="dropdown" data-hr-toggle="popup" data-hr-class-on="show">
+                        <div class="dropdown-menu" data-hr-view="results" data-hr-view-component="hr.forms.default-searchResult" data-hr-toggle="popup" data-hr-class-on="show"></div>
                     </div>
                 </div>
             </div>
@@ -148,10 +148,10 @@
     </template>
 
     <template data-hr-component="hr.forms.default-searchResult">
-        <li><a href="#" data-hr-on-click="selectItem">{{title}}</a></li>
+        <a href="#" class="dropdown-item" data-hr-on-click="selectItem">{{title}}</a>
     </template>
     <template data-hr-variant="message">
-        <li><a>{{title}}</a></li>
+        <a class="dropdown-item">{{title}}</a>
     </template>
 
     <!-- Horizontal Form -->
@@ -298,8 +298,8 @@
                 </label>
                 <div class="col-sm-10" data-hr-on-focusout="stopSearch" data-hr-handle="searchFocusParent">
                     <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" data-hr-on-input="updateSearch" />
-                    <div class="dropdown" data-hr-toggle="popup" data-hr-class-on="open">
-                        <ul class="dropdown-menu" data-hr-view="results" data-hr-view-component="hr.forms.horizontal-searchResult"></ul>
+                    <div class="dropdown" data-hr-toggle="popup" data-hr-class-on="show">
+                        <div class="dropdown-menu" data-hr-view="results" data-hr-view-component="hr.forms.horizontal-searchResult" data-hr-toggle="popup" data-hr-class-on="show"></div>
                     </div>
                 </div>
             </div>
@@ -323,10 +323,10 @@
     </template>
 
     <template data-hr-component="hr.forms.horizontal-searchResult">
-        <li><a href="#" data-hr-on-click="selectItem">{{title}}</a></li>
+        <a href="#" class="dropdown-item" data-hr-on-click="selectItem">{{title}}</a>
     </template>
     <template data-hr-variant="message">
-        <li><a>{{title}}</a></li>
+        <a class="dropdown-item">{{title}}</a>
     </template>
 </body>
 </html>
