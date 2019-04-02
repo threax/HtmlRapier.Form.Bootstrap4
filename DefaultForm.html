@@ -47,6 +47,15 @@
             </div>
         </div>
     </template>
+    <template data-hr-variant="file">
+        <div class="{{formItemClass}}" data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
+            <div class="form-group">
+                <label for="{{uniqueId}}" data-hr-toggle="{{buildName}}Error" data-hr-class-on="text-danger">{{title}}</label>
+                <input id="{{uniqueId}}" class="form-control-file" name="{{buildName}}" type="{{buildType}}" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid"/>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
+            </div>
+        </div>
+    </template>
     <template data-hr-variant="checkbox">
         <div class="{{formItemClass}}" data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
             <div class="form-check mb-2">
@@ -209,6 +218,17 @@
                 <label for="{{uniqueId}}" class="col-sm-2 col-form-label" data-hr-toggle="{{buildName}}Error" data-hr-class-on="text-danger">{{title}}</label>
                 <div class="col-sm-10">
                     <textarea id="{{uniqueId}}" class="form-control" name="{{buildName}}" rows="{{size}}" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid"></textarea>
+                    <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template data-hr-variant="file">
+        <div class="{{formItemClass}}" data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
+            <div class="form-group row">
+                <label for="{{uniqueId}}" class="col-sm-2 col-form-label" data-hr-toggle="{{buildName}}Error" data-hr-class-on="text-danger">{{title}}</label>
+                <div class="col-sm-10">
+                    <input id="{{uniqueId}}" class="form-control-file mt-2" name="{{buildName}}" type="{{buildType}}" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid"/>
                     <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
                 </div>
             </div>
