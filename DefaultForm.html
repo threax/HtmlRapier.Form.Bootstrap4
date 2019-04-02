@@ -8,38 +8,42 @@
 <body>
     <template data-hr-component="hr.forms.default">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
+            <div class="form-group">
+                <label for="{{uniqueId}}">{{title}}</label>
                 {{if xUi.autocomplete}}
-                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="{{buildType}}" list="{{uniqueId}}-datalist" />
+                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="{{buildType}}" list="{{uniqueId}}-datalist" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid" />
                 <datalist id="{{uniqueId}}-datalist"></datalist>
                 {{else}}
-                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="{{buildType}}" />
+                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="{{buildType}}" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid" />
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
                 {{/if}}
             </div>
         </div>
     </template>
     <template data-hr-variant="date-time">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" />
+            <div class="form-group">
+                <label for="{{uniqueId}}">{{title}}</label>
+                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid"/>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
             </div>
         </div>
     </template>
     <template data-hr-variant="date">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" />
+            <div class="form-group">
+                <label for="{{uniqueId}}">{{title}}</label>
+                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid"/>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
             </div>
         </div>
     </template>
     <template data-hr-variant="textarea">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <textarea id="{{uniqueId}}" class="form-control" name="{{buildName}}" rows="{{size}}"></textarea>
+            <div class="form-group">
+                <label for="{{uniqueId}}">{{title}}</label>
+                <textarea id="{{uniqueId}}" class="form-control" name="{{buildName}}" rows="{{size}}" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid"></textarea>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
             </div>
         </div>
     </template>
@@ -48,6 +52,7 @@
             <div class="form-check mb-2">
                 <input type="checkbox" class="form-check-input" name="{{buildName}}" value="{{buildValue}}" id="{{uniqueId}}" />&nbsp;
                 <label class="form-check-label" for="{{uniqueId}}">{{title}}</label>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
             </div>
         </div>
     </template>
@@ -56,46 +61,50 @@
     </template>
     <template data-hr-variant="number">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="number" step="any" />
+            <div class="form-group">
+                <label for="{{uniqueId}}">{{title}}</label>
+                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="number" step="any" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid"/>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
             </div>
         </div>
     </template>
     <template data-hr-variant="select">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <select id="{{uniqueId}}" class="form-control" name="{{buildName}}" />
+            <div class="form-group">
+                <label for="{{uniqueId}}">{{title}}</label>
+                <select id="{{uniqueId}}" class="form-control" name="{{buildName}}" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid"></select>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
             </div>
         </div>
     </template>
     <template data-hr-variant="multiselect">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <select id="{{uniqueId}}" class="form-control" name="{{buildName}}" multiple size="{{size}}" />
+            <div class="form-group">
+                <label for="{{uniqueId}}">{{title}}</label>
+                <select id="{{uniqueId}}" class="form-control" name="{{buildName}}" multiple size="{{size}}" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid"></select>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
             </div>
         </div>
     </template>
     <template data-hr-variant="arrayEditor">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label>{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <div class="card">
+            <div class="form-group">
+                <label>{{title}}</label>
+                <div class="card" data-hr-toggle="{{buildName}}Error" data-hr-class-on="border-danger">
                     <div class="card-body">
                         <div data-hr-view="items" data-hr-view-component="hr.forms.default-arrayEditorItem"></div>
                         <button type="button" class="btn btn-default" data-hr-on-click="add">Add</button>
                     </div>
                 </div>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
             </div>
         </div>
     </template>
     <template data-hr-variant="multicheckbox">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label>{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <div class="card" style="max-height:150px;overflow:auto;">
+            <div class="form-group">
+                <label>{{title}}</label>
+                <div class="card" style="max-height:150px;overflow:auto;" data-hr-toggle="{{buildName}}Error" data-hr-class-on="border-danger">
                     <div class="card-body pt-1 pb-1 pl-2 pr-2">
                         {{if xUi.selectAll}}
                         <div class="form-check"><input type="checkbox" class="form-check-input" id="{{uniqueId}}-hr-multicheck-selectall" value="true" data-hr-on-click="selectAll" data-hr-handle="selectAll" />&nbsp;<label class="form-check-label" for="{{uniqueId}}-hr-multicheck-selectall">Select All</label></div>
@@ -104,33 +113,34 @@
                     </div>
                 </div>
                 <div class="clearfix"></div>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
             </div>
         </div>
     </template>
     <template data-hr-variant="radiobutton">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label>{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <div class="card">
+            <div class="form-group">
+                <label>{{title}}</label>
+                <div class="card" data-hr-toggle="{{buildName}}Error" data-hr-class-on="border-danger">
                     <div class="card-body pt-1 pb-1 pl-2 pr-2">
                         <div data-hr-view="items" data-hr-view-component="hr.forms.default-radiobutton"></div>
                     </div>
                 </div>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
             </div>
         </div>
     </template>
     <template data-hr-variant="search">
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
-            <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
-                <label for="{{uniqueId}}">
-                    {{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span>
-                </label>
+            <div class="form-group">
+                <label for="{{uniqueId}}">{{title}}</label>
                 <div data-hr-on-focusout="stopSearch" data-hr-handle="searchFocusParent">
-                    <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" data-hr-on-input="updateSearch" />
+                    <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" data-hr-on-input="updateSearch" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid"/>
                     <div class="dropdown" data-hr-toggle="popup" data-hr-class-on="show">
                         <div class="dropdown-menu" data-hr-view="results" data-hr-view-component="hr.forms.default-searchResult" data-hr-toggle="popup" data-hr-class-on="show"></div>
                     </div>
                 </div>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none">{{{this}}}</div>
             </div>
         </div>
     </template>
