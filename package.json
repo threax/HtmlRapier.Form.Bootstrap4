@@ -1,20 +1,16 @@
 {
   "name": "htmlrapier.form.bootstrap4",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A form that uses Bootstrap 4 for HtmlRapier.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/threax/HtmlRapier.Bootstrap3.Form.git"
   },
   "author": "threax",
-  "license": "Apache",
-  "devDependencies": {
-    "@types/node": "^6.0.69"
-  },
+  "license": "MIT",
   "dependencies": {
     "htmlrapier": ">=19.0.0",
-    "bootstrap": ">=4.1.0",
-    "jquery": ">=3.2.1"
+    "bootstrap": ">=4.1.0"
   },
   "files":[
     "defaultform.ts",
