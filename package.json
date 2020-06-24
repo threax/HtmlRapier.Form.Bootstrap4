@@ -12,7 +12,7 @@
     "htmlrapier": ">=19.0.0",
     "bootstrap": ">=4.1.0"
   },
-  "files":[
+  "files": [
     "defaultform.ts",
     "defaultformrunner.ts",
     "tsimport.json"

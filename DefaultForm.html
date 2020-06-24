@@ -109,6 +109,19 @@
             </div>
         </div>
     </template>
+    <template data-hr-variant="objectEditor">
+        <div class="{{formItemClass}}" data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
+            <div class="form-group">
+                <label data-hr-toggle="{{buildName}}Error" data-hr-class-on="text-danger">{{title}}</label>
+                <div class="{{buildName}} card" data-hr-toggle="{{buildName}}Error" data-hr-class-on="border-danger">
+                    <div class="card-body">
+                        <div data-hr-view="items" data-hr-view-component="hr.forms.default-objectEditorItem"></div>
+                    </div>
+                </div>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-class-on="d-block" data-hr-class-off="d-none" data-hr-state="off">{{{this}}}</div>
+            </div>
+        </div>
+    </template>
     <template data-hr-variant="multicheckbox">
         <div class="{{formItemClass}}" data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
             <div class="form-group">
@@ -164,6 +177,10 @@
 
     <template data-hr-component="hr.forms.default-arrayEditorItem">
         <div class="card mb-2"><div class="card-body"><button type="button" data-hr-on-click="remove" class="btn btn-default" data-hr-form-end>Remove</button></div></div>
+    </template>
+
+    <template data-hr-component="hr.forms.default-objectEditorItem">
+        <div></div>
     </template>
 
     <template data-hr-component="hr.forms.default-searchResult">
@@ -298,6 +315,19 @@
             </div>
         </div>
     </template>
+    <template data-hr-variant="objectEditor">
+        <div class="{{formItemClass}}" data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
+            <div class="form-group">
+                <label data-hr-toggle="{{buildName}}Error" data-hr-class-on="text-danger">{{title}}</label>
+                <div class="{{buildName}} card" data-hr-toggle="{{buildName}}Error" data-hr-class-on="border-danger">
+                    <div class="card-body">
+                        <div data-hr-view="items" data-hr-view-component="hr.forms.horizontal-objectEditorItem"></div>
+                    </div>
+                </div>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-class-on="d-block" data-hr-class-off="d-none" data-hr-state="off">{{{this}}}</div>
+            </div>
+        </div>
+    </template>
     <template data-hr-variant="multicheckbox">
         <div class="{{formItemClass}}" data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
             <div class="form-group row">
@@ -361,6 +391,10 @@
                 <button type="button" data-hr-on-click="remove" class="btn btn-default" data-hr-form-end>Remove</button>
             </div>
         </div>
+    </template>
+
+    <template data-hr-component="hr.forms.horizontal-objectEditorItem">
+        <div></div>
     </template>
 
     <template data-hr-component="hr.forms.horizontal-searchResult">
