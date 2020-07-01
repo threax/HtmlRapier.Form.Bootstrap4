@@ -70,3 +70,7 @@ component.register("hr.forms.horizontal-objectEditorItem", builder);
 builder = new ComponentBuilder('<a href="#" class="dropdown-item" data-hr-on-click="selectItem">{{title}}</a>');
 builder.addVariant("message", new VariantBuilder('<a class="dropdown-item">{{title}}</a>'));
 component.register("hr.forms.horizontal-searchResult", builder);
+
+export function setup() {
+    return true; //Does not do anything, but makes module work.
+}
