@@ -38,6 +38,15 @@
             </div>
         </div>
     </template>
+    <template data-hr-variant="time">
+        <div class="{{formItemClass}}" data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
+            <div class="form-group">
+                <label for="{{uniqueId}}" data-hr-toggle="{{buildName}}Error" data-hr-class-on="text-danger">{{title}}</label>
+                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid"/>
+                <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-class-on="d-block" data-hr-class-off="d-none" data-hr-state="off">{{{this}}}</div>
+            </div>
+        </div>
+    </template>
     <template data-hr-variant="textarea">
         <div class="{{formItemClass}}" data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
             <div class="form-group">
@@ -221,6 +230,17 @@
         </div>
     </template>
     <template data-hr-variant="date">
+        <div class="{{formItemClass}}" data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
+            <div class="form-group row">
+                <label for="{{uniqueId}}" class="col-sm-2 col-form-label" data-hr-toggle="{{buildName}}Error" data-hr-class-on="text-danger">{{title}}</label>
+                <div class="col-sm-10">
+                    <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="text" data-hr-toggle="{{buildName}}Error" data-hr-class-on="is-invalid"/>
+                    <div class="invalid-feedback" data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-class-on="d-block" data-hr-class-off="d-none" data-hr-state="off">{{{this}}}</div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template data-hr-variant="time">
         <div class="{{formItemClass}}" data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
             <div class="form-group row">
                 <label for="{{uniqueId}}" class="col-sm-2 col-form-label" data-hr-toggle="{{buildName}}Error" data-hr-class-on="text-danger">{{title}}</label>
