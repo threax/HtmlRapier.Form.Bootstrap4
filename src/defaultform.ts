@@ -1,7 +1,5 @@
-///<amd-module name="hr.form.bootstrap4"/>
-
-import * as component from 'hr.components';
-import {ComponentBuilder, VariantBuilder} from 'hr.componentbuilder';
+import * as component from 'htmlrapier/src/components';
+import {ComponentBuilder, VariantBuilder} from 'htmlrapier/src/componentbuilder';
 
 var builder;
 

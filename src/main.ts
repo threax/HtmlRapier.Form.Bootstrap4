@@ -1,4 +1,4 @@
-import * as defaultform from 'hr.form.bootstrap4.defaultform';
+import * as defaultform from './defaultform';
 
 defaultform.setup();
 
