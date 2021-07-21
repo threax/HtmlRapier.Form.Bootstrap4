@@ -1,11 +1,4 @@
 {
-  "compilerOptions": {
-    "paths": {
-      "hr.form.bootstrap4.*": [
-        "src/*"
-      ]
-    }
-  },
   "include": [
     "src\\**\\*.ts"
   ]
